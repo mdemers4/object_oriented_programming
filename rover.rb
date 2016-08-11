@@ -47,15 +47,19 @@ class Rover
 
 	def turn_right()
 		if @direction == 'N'
+			
 			return @direction = 'E'
 
 		elsif @direction == 'E'
+			
 			return @direction = 'S'
 
 		elsif @direction == 'S'
+			
 			return @direction = 'W'
 
 		elsif @direction == 'W'
+			
 			return @direction = 'N'
 
 		else 
@@ -73,10 +77,10 @@ class Rover
 			return @x_cordination += 1 , @y_cordination
 
 		elsif @direction == 'S'
-			return @x_cordination , @y_cordination += 1
+			return @x_cordination , @y_cordination -= 1
 
 		elsif @direction == 'W'
-			return @x_cordination += 1 , @y_cordination
+			return @x_cordination -= 1 , @y_cordination
 
 		else 
 			puts "error with moving forward"
@@ -84,7 +88,7 @@ class Rover
 	end
 end
 
-rover = Rover.new(0,0,'N')
+rover = Rover.new(1,2,'N')
 puts "insert size of plane for x axis"
 x_max = gets.chomp.to_i
 puts "insert size of plane for y axis"
